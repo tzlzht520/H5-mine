@@ -26,8 +26,7 @@ export default {
       if(this.code){
         alert("错误")
       }else {
-        console.log(location)
-        // window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid="+ this.appid +"&redirect_uri="+ this.redirect_uri +"&type=code&scope=snsapi_base#wechat_redirect"
+        window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid="+ this.appid +"&redirect_uri="+ this.redirect_uri +"&type=code&scope=snsapi_base#wechat_redirect"
       }
     }
   },
