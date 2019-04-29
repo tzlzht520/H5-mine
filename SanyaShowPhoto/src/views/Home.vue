@@ -13,8 +13,7 @@ export default {
   name: 'home',
   data() {
     return {
-      code: this.$route.param.code,
-      redirect_uri: encodeURI("http://wxsc.saselomo.com/about"),
+      redirect_uri: encodeURI("http://wxsc.saselomo.com/activity/#/about"),
       appid: "wx55da418f69963f69"
     }
   },
@@ -26,11 +25,12 @@ export default {
       if(this.code){
         alert("错误")
       }else {
-        window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid="+ this.appid +"&redirect_uri="+ this.redirect_uri +"&type=code&scope=snsapi_base#wechat_redirect"
+        window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx55da418f69963f69&redirect_uri=http%3A%2F%2Fwxsc.saselomo.com%2Factivity%2F%23%2Fabout&type=code&scope=snsapi_userinfo&state=123#wechat_redirect"
       }
     }
   },
   created() {
+    console.log("aaa")
     this.getCod()
   },
 }
